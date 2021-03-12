@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<body>
+
+<!--头部-->
+<div class="layui-header" th:fragment="head">
+    <div class="layui-logo">员工管理后台</div>
+    <ul class="layui-nav layui-layout-left">
+        <li class="layui-nav-item"><a href="">控制台</a></li>
+        <li class="layui-nav-item"><a href="">商品管理</a></li>
+        <li class="layui-nav-item"><a href="">用户</a></li>
+        <li class="layui-nav-item">
+            <a href="javascript:;">其它系统</a>
+            <dl class="layui-nav-child">
+                <dd><a href="">邮件管理</a></dd>
+                <dd><a href="">消息管理</a></dd>
+                <dd><a href="">授权管理</a></dd>
+            </dl>
+        </li>
+    </ul>
+    <ul class="layui-nav layui-layout-right">
+        <li class="layui-nav-item">
+            <a href="javascript:;">
+                <img src="http://t.cn/RCzsdCq" class="layui-nav-img">
+                贤心
+            </a>
+            <dl class="layui-nav-child">
+                <dd><a href="">基本资料</a></dd>
+                <dd><a href="">安全设置</a></dd>
+            </dl>
+        </li>
+        <li class="layui-nav-item"><a href="">注销</a></li>
+    </ul>
+</div>
+
+<!--左侧-->
+<div class="layui-side layui-bg-black" th:fragment="left">
+    <div class="layui-side-scroll">
+        <ul class="layui-nav layui-nav-tree"  lay-filter="test">
+            <li class="layui-nav-item layui-nav-itemed">
+                <a class="" href="javascript:;">所有商品</a>
+                <dl class="layui-nav-child">
+                    <dd><a href="javascript:;">列表一</a></dd>
+                    <dd><a href="javascript:;">列表二</a></dd>
+                    <dd><a href="javascript:;">列表三</a></dd>
+                    <dd><a href="">超链接</a></dd>
+                </dl>
+            </li>
+            <li class="layui-nav-item">
+                <a href="javascript:;">解决方案</a>
+                <dl class="layui-nav-child">
+                    <dd><a href="javascript:;">列表一</a></dd>
+                    <dd><a href="javascript:;">列表二</a></dd>
+                    <dd><a href="">超链接</a></dd>
+                </dl>
+            </li>
+            <li class="layui-nav-item"><a href="">云市场</a></li>
+            <li class="layui-nav-item"><a th:href="@{/list/1}">查看员工</a></li>
+        </ul>
+    </div>
+</div>
+
+<!--底部-->
+<div th:fragment="foot">
+    © layui.com - 底部固定区域
+</div>
+
+</body>
+</html>
